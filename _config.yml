@@ -23,3 +23,6 @@ version:             1.0.0
 
 # Gems
 plugins: [jekyll-paginate]
+
+# Github
+github:              https://github.com/gentcys
