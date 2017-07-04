@@ -1,3 +1,4 @@
+timezone:            Asia/Shanghai
 # Permalinks
 #
 # Use of `relative_permalinks` ensures post links from the index work properly.
