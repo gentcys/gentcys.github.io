@@ -3,6 +3,7 @@ layout: post
 tile: "我的第一篇博文"
 date: 2017-07-04 17:16:15 +0800
 category: posts
+comments: true
 ---
 开始折腾博客，这是我的第一篇博文。这个博客系统是使用 [Github Pages][] 服务的 [Jekyll][] 静态博客程序搭建的。
 我将使用这个博客来记录编程相关的想法和知识。
