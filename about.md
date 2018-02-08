@@ -1,30 +1,35 @@
 ---
 layout: page
-title: About
+title: About Me
 ---
+## Summary
 
-<p class="message">
-  Hey there! This page is included as an example. Feel free to customize it for your own use upon downloading. Carry on!
-</p>
+I'm Gentry Chen. Currently I am a full stack web developer with 2+ years of experience. I have an insatiable curiosity for AI - particularly deep learning - applications and their potential to change the technology landscape.
 
-In the novel, *The Strange Case of Dr. Jeykll and Mr. Hyde*, Mr. Poole is Dr. Jekyll's virtuous and loyal butler. Similarly, Poole is an upstanding and effective butler that helps you build Jekyll themes. It's made by [@mdo](https://twitter.com/mdo).
+## Skills
 
-There are currently two themes built on Poole:
+* Responsible for back-end web development implemented by PHP/Laravel
+* Demonstrated front-end pages with HTML/Bootstrap/AngularJS
+* Designed the structure of MySQL databases and tables
+* Optimized database query speed, such as split databases and tables, created indexes
+* Handled everything from small to large projects by Git
 
-* [Hyde](http://hyde.getpoole.com)
-* [Lanyon](http://lanyon.getpoole.com)
+As you can see, PHP and Laravel are my majority tools at my working time. I am willing to use Ruby and Ruby on Rails to implement pet projects after my work. BTW, I'm an enthusiast for Emacs.
 
-Learn more and contribute on [GitHub](https://github.com/poole).
+## Experience
 
-## Setup
+### 2016-04 ~ present: Fuzhou Meishenghuo Network Technology Ltd.
 
-Some fun facts about the setup of this project include:
+* Maintenanced existing features of a property management system
+* Created a report module of the property management system
+* Provided API for Wechat and mobile platform
+* Optimized access speed and user interface
 
-* Built for [Jekyll](http://jekyllrb.com)
-* Developed on GitHub and hosted for free on [GitHub Pages](https://pages.github.com)
-* Coded with [Sublime Text 2](http://sublimetext.com), an amazing code editor
-* Designed and developed while listening to music like [Blood Bros Trilogy](https://soundcloud.com/maddecent/sets/blood-bros-series)
+## Contact Me
 
-Have questions or suggestions? Feel free to [open an issue on GitHub](https://github.com/poole/issues/new) or [ask me on Twitter](https://twitter.com/mdo).
-
-Thanks for reading!
+* E-mail: gentcys@gmail.com
+* StackOverflow: [stackoverflow.com/users/2876134](https://stackoverflow.com/users/2876134)
+* Github: [github.com/gentcys](https://github.com/gentcys)
+* Website: [gentcys.github.io](https://gentcys.github.io)
+* LinkedIn: [linkedin.com/in/gentcys](https://www.linkedin.com/in/gentcys)
+* Twitter [twitter.com/gentcys](https://twitter.com/gentcys)
