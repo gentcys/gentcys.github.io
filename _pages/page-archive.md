@@ -1,0 +1,6 @@
+---
+layout: archive
+title: "Page Archive"
+permalink: /page-archive/
+author_profile: false
+---

@@ -1,10 +1,12 @@
 ---
-layout: page
+layout: default
 title: About Me
+permalink: /about/
+author_profile: false
 ---
 ## Summary
 
-I'm Gentry Chen. Currently I am a full stack web developer with 2+ years of experience. I have an insatiable curiosity for AI - particularly deep learning - applications and their potential to change the technology landscape.
+I'm Gentry Chen. Currently I am a full stack web developer with 5+ years of experience. I have an insatiable curiosity for AI - particularly deep learning - applications and their potential to change the technology landscape.
 
 ## Skills
 
