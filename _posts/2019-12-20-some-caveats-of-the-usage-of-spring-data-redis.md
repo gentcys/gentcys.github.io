@@ -15,23 +15,23 @@ comments: true
 Spring Data Redis 提供一个操作类 RedisTemplate 给外部操作 Redis。日常的操作最终都是执行其类中的 `execute` 方法。
 
 ```Java
-	@Nullable
-	public <T> T execute(RedisCallback<T> action, boolean exposeConnection, boolean pipeline) {
+@Nullable
+public <T> T execute(RedisCallback<T> action, boolean exposeConnection, boolean pipeline) {
 
-		Assert.isTrue(initialized, "template not initialized; call afterPropertiesSet() before using it");
-		Assert.notNull(action, "Callback object must not be null");
+   	Assert.isTrue(initialized, "template not initialized; call afterPropertiesSet() before using it");
+   	Assert.notNull(action, "Callback object must not be null");
 
-		RedisConnectionFactory factory = getRequiredConnectionFactory();
-		RedisConnection conn = null;
-		try {
+   	RedisConnectionFactory factory = getRequiredConnectionFactory();
+   	RedisConnection conn = null;
+	try {
 
-			if (enableTransactionSupport) {
-				// only bind resources in case of potential transaction synchronization
-                // 绑定一个连接到当前线程
-				conn = RedisConnectionUtils.bindConnection(factory, enableTransactionSupport);
-			} else {
-				conn = RedisConnectionUtils.getConnection(factory);
-			}
+	   	if (enableTransactionSupport) {
+	   		// only bind resources in case of potential transaction synchronization
+            // 绑定一个连接到当前线程
+	   		conn = RedisConnectionUtils.bindConnection(factory, enableTransactionSupport);
+	   	} else {
+	   		conn = RedisConnectionUtils.getConnection(factory);
+	   	}
 
 			boolean existingConnection = TransactionSynchronizationManager.hasResource(factory);
 
@@ -65,15 +65,15 @@ Spring Data Redis 提供一个操作类 RedisTemplate 给外部操作 Redis。�
 public static RedisConnection doGetConnection(RedisConnectionFactory factory, boolean allowCreate, boolean bind,
 			boolean enableTransactionSupport) {
 
-		Assert.notNull(factory, "No RedisConnectionFactory specified");
+	Assert.notNull(factory, "No RedisConnectionFactory specified");
 
     // 先查看当前线程是否已经绑定连接
-		RedisConnectionHolder connHolder = (RedisConnectionHolder) TransactionSynchronizationManager.getResource(factory);
+	RedisConnectionHolder connHolder = (RedisConnectionHolder) TransactionSynchronizationManager.getResource(factory);
 
-		if (connHolder != null) {
-			if (enableTransactionSupport) {
-				potentiallyRegisterTransactionSynchronisation(connHolder, factory);
-			}
+	if (connHolder != null) {
+	   	if (enableTransactionSupport) {
+	   		potentiallyRegisterTransactionSynchronisation(connHolder, factory);
+	   	}
 			return connHolder.getConnection();
 		}
 
@@ -85,7 +85,7 @@ public static RedisConnection doGetConnection(RedisConnectionFactory factory, bo
 			log.debug("Opening RedisConnection");
 		}
 
-    // 没有的话就新建一个连接
+        // 没有的话就新建一个连接
 		RedisConnection conn = factory.getConnection();
 
 		if (bind) {
@@ -97,13 +97,13 @@ public static RedisConnection doGetConnection(RedisConnectionFactory factory, bo
 
 			connHolder = new RedisConnectionHolder(connectionToBind);
 
-    // 然后再绑定到当前线程
+           // 然后再绑定到当前线程
 			TransactionSynchronizationManager.bindResource(factory, connHolder);
 			if (enableTransactionSupport) {
 				potentiallyRegisterTransactionSynchronisation(connHolder, factory);
 			}
 
-    // 返回绑定的连接
+            // 返回绑定的连接
 			return connHolder.getConnection();
 		}
 
