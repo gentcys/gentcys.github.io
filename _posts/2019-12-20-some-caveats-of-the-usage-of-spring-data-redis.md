@@ -57,7 +57,7 @@ public <T> T execute(RedisCallback<T> action, boolean exposeConnection, boolean 
 	}
 {% endhighlight %}
 
-注意 `enableTransactionSupport` 在项目中我们开启了事务，所以将会运行 `conn = RedisConnectionUtils.bindConnection(factory, enableTransactionSupport);` 绑定一个连接到当前线程，具体看看是如何绑定的。
+注意 `enableTransactionSupport` 在项目中我们开启了事务，所以将会运行 `conn = RedisConnectionUtils.bindConnection(factory, enableTransactionSupport);` 绑定一个连接到当前线程，具体看看是如何绑定的。`RedisConnectionUtils.bindConnection()` 内部是调用 `doGetConnection()` 方法。
 
 {% highlight java %}
 public static RedisConnection doGetConnection(RedisConnectionFactory factory, boolean allowCreate, boolean bind,
@@ -108,8 +108,6 @@ public static RedisConnection doGetConnection(RedisConnectionFactory factory, bo
 		return conn;
 	}
 {% endhighlight %}
-
-`RedisConnectionUtils.bindConnection()` 内部是调用 `doGetConnection()` 方法。
 
 以上就是如何获取一个连接的过程。然后会进行我们的读写操作，之后再释放连接，让我们看看是如何释放连接的吧。
 释放连接调用的是 `RedisConnectionUtils.releaseConnection` 方法。
@@ -162,4 +160,4 @@ public static void releaseConnection(@Nullable RedisConnection conn, RedisConnec
 	}
 {% endhighlight %}
 
-可以看到，当 RedisTemplate 打开事务支持（enableTransactionSupport=true）的时候，执行 Redis 操作的方法如果没有添加 @Transactional 则连接不会被释放，一直绑定到到当前线程
+可以看到，*当 RedisTemplate 打开事务支持（enableTransactionSupport=true）的时候，执行 Redis 操作的方法如果没有添加 @Transactional 则连接不会被释放，一直绑定到到当前线程*
