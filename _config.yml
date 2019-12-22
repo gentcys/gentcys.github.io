@@ -277,10 +277,10 @@ compress_html:
 defaults:
   # _posts
   - scope:
-      path: _posts
+      path: ""
       type: posts
     values:
-      layout: post
+      layout: single
       classes: wide
       author_profile: true
       read_time: true
