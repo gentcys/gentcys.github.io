@@ -1,5 +1,4 @@
 ---
-layout: posts
 title: "Spring Data Redis 使用连接池被占满"
 date: 2019-12-20 10:44:55 +0800
 category: posts

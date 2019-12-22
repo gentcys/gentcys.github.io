@@ -1,5 +1,4 @@
 ---
-layout: posts
 title: "调整PHP-FPM子进程"
 date: 2018-08-24 06:12:15 +0800
 category: posts
