@@ -1,6 +1,6 @@
 ---
 layout: posts
-title: "使用 Spring Data Redis 踩坑总结"
+title: "Spring Data Redis 使用连接池被占满"
 date: 2019-12-20 10:44:55 +0800
 category: posts
 comments: true
@@ -8,7 +8,7 @@ comments: true
 
 > 本篇博客仅描述本人使用 Spring Data Redis 过程中遇到的一些坑，关于什么是 Spring Data Redis 以及怎么使用在这里不做赘述。
 
-前段时间公司的项目开始使用 Redis 作为缓存。有一天，同事告诉我连接池连接被占满，造成后续请求阻塞但是请求数量并不是很大，让我有空帮忙查一下是什么问题造成的。不管怎样，刷一下源代码先。
+前段时间公司的项目开始使用 Redis 作为缓存。有一天，同事告诉我连接池连接被占满造成后续请求阻塞，但是具体业务请求数量并不是很大，让我有空帮忙查一下是什么问题造成的。不管怎样，刷一下源代码先。
 
 Spring Data Redis 提供一个操作类 RedisTemplate 给外部操作 Redis。日常的操作最终都是执行其类中的 `execute` 方法。
 
