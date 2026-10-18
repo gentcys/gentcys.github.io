@@ -16,7 +16,7 @@ minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt"
 
 # Site Settings
 locale                   : "zh-CN"
-title                    : "编程杂货铺"
+title                    : "Cong's Blog"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
 name                     : "Gentry Chen"
