@@ -15,7 +15,7 @@ remote_theme           : "mmistakes/minimal-mistakes@4.17.2"
 minimal_mistakes_skin    : "default" # "air", "aqua", "contrast", "dark", "dirt", "neon", "mint", "plum", "sunrise"
 
 # Site Settings
-locale                   : "zh-CN"
+locale                   : "en-US"
 title                    : "Cong's Blog"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
