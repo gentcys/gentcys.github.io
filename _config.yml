@@ -19,7 +19,7 @@ locale                   : "zh-CN"
 title                    : "Cong's Blog"
 title_separator          : "-"
 subtitle                 : # site tagline that appears below site title in masthead
-name                     : "Gentry Chen"
+name                     : "Cong Chen"
 description              : "A blog that stores my thought and idea."
 url                      : "https://gentcys.github.io"
 baseurl                  : # the subpath of your site, e.g. "/blog"
