@@ -10,6 +10,7 @@ gem "base64"
 
 # Add any custom plugins you want to use here (e.g., jekyll-sitemap, jekyll-feed)
 group :jekyll_plugins do
+  gem "jekyll-gist"
   gem "jekyll-paginate"
   gem "jekyll-sitemap"
   gem "jekyll-include-cache"
