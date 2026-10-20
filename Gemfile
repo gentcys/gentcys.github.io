@@ -17,3 +17,6 @@ group :jekyll_plugins do
   gem "jekyll-feed"
   gem "jekyll-seo-tag"
 end
+
+# Theme for Jekyll
+gem "minimal-mistakes-jekyll"
